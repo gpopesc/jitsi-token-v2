@@ -11,7 +11,6 @@ ENV DEBIAN_FRONTEND=${DF} \
     LANGUAGE=${LANGUAGE} \
     TZ=${TZ} \
     USER_NAME=www-data \
-    USER_PASSWORD=${USER_PASSWORD} \
     UID=33 \
     GID=33 \
     JITSI_SERVER=${JITSI_SERVER} \
@@ -19,7 +18,6 @@ ENV DEBIAN_FRONTEND=${DF} \
     JWT_SECRET=${JWT_SECRET} \
     JWT_ISS=${JWT_ISS} \
     JWT_AUD=${JWT_AUD} \
-    # JWT_EXP=${JWT_EXP} \
     JWT_SUB=${JWT_SUB} \
     EMAIL_SERVER=${EMAIL_SERVER} \
     EMAIL_PORT=${EMAIL_PORT} \
@@ -38,14 +36,9 @@ ENV DEBIAN_FRONTEND=${DF} \
 
 
 # mandatory apps
-RUN apt-get update && apt-get -y install unzip \
-      wget \
+RUN apt-get update && apt-get -y --no-install-recommends install wget \
       curl \
-#      apt-utils \
-#      nano \
       tzdata \
-#      procps \
-#      sudo \
       apache2 \
       php7.4 \
       php7.4-common php7.4-curl php7.4-cli php7.4-dev php7.4-opcache php7.4-zip php7.4-intl \
@@ -59,11 +52,8 @@ HEALTHCHECK --interval=1m --timeout=10s CMD curl --fail http://127.0.0.1:80
 
 #config files to temp location
 #RUN mkdir /var/www/html/script/
-#COPY ./smtp/* /var/www/html
-#COPY ./script/* /var/www/html/script/
+COPY html/ /var/www/html
 
-#RUN tar -xf /var/www/html/smtp-html.zip.tar.xz && \
-#    rm -v /var/www/html/smtp-html.zip.tar.xz
 
 COPY startup.sh /
 RUN chmod +x /startup.sh

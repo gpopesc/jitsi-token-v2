@@ -24,9 +24,7 @@ EOF
 /bin/sed -i 's|;date.timezone =|date.timezone = '${TZ}'|g' /etc/php/7.4/apache2/php.ini
 
 chown www-data:www-data -R /var/www/html/*
-chmod 777 -R /var/www/html/*
-
-#sh /var/www/html/script/deno.sh
+chmod 755 -R /var/www/html/*
 
 sh /usr/sbin/apache2ctl -D FOREGROUND
 echo "===========> script finnished <============"

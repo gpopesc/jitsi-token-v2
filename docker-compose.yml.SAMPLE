@@ -1,17 +1,16 @@
 version: "3"
 services:
   jitsi-token:
-    image: gpopesc/jitsi-token:latest
-    container_name: jitsi-token
+    image: gpopesc/jitsi-token-v2:latest
+    container_name: jitsi-token-v2
     environment:
       - TZ=$TZ
-      - USER_PASSWORD=$USER_PASS  
+#      - USER_PASSWORD=$USER_PASS  
       - JITSI_SERVER=$JITSI_SERVER
       - JWT_ALG=$JWT_ALG
       - JWT_SECRET=$JWT_SECRET
       - JWT_ISS=$JWT_ISS
       - JWT_AUD=$JWT_AUD
-      - JWT_EXP=$JWT_EXP
       - JWT_SUB=$JWT_SUB
       - EMAIL_SERVER=$EMAIL_SERVER
       - EMAIL_PORT=$EMAIL_PORT
@@ -27,6 +26,5 @@ services:
       - YRL_API_URL=$YRL_API_URL
       - JWT_SERVER_NAME=$JWT_SERVER_NAME
     ports:
-      - $API_PORT:9000   
       - $HTTPPORT:80
     restart: always
