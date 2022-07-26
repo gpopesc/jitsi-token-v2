@@ -9,6 +9,7 @@ For docker installation just download the 2 files from above: *docker-compose.ym
 #API
 not available in this version. if you want api, use first version https://github.com/gpopesc/jitsi-token 
 
+![2022-07-26_16-23](https://user-images.githubusercontent.com/11590919/181018137-79dbd88d-2135-4165-acfb-cbdf86c1beea.png)
 
 
 This docker build use PHPMailer(https://github.com/PHPMailer/PHPMailer) for sending the emails and Yourls (https://yourls.org/) URL shortener (optional)
