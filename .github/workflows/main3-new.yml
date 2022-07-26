@@ -30,10 +30,10 @@ jobs:
         uses: docker/build-push-action@v3
         with:
           push: true
-          tags: gpopesc/jitsi-token:latest
+          tags: gpopesc/jitsi-token-v2:latest
       -
         name: Build and push date
         uses: docker/build-push-action@v3
         with:
           push: true
-          tags: gpopesc/jitsi-token:${{ steps.date.outputs.date }}
+          tags: gpopesc/jitsi-token-v2:${{ steps.date.outputs.date }}
