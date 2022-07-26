@@ -24,7 +24,7 @@ if(strlen($meetingtime) < 10) {
 
 //Get variables from docker
 $jitsi_server=getenv('JITSI_SERVER');
-$jwt_alg=getenv('JWT_ALG');
+#$jwt_alg=getenv('JWT_ALG');
 $jwt_secret=getenv('JWT_SECRET');
 $jwt_iss=getenv('JWT_ISS');
 $jwt_aud=getenv('JWT_AUD');
