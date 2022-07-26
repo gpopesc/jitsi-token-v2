@@ -5,9 +5,7 @@
 For docker installation just download the 2 files from above: *docker-compose.yml.SAMPLE* and *.env.SAMPLE* and rename them to *docker-compose.yml* and *.env* Adjust your variables accordingly in .env file, then run the *docker-compose up -d*, and access the interface from your browser. Use reverse proxy to seure your connection, if you want to make available from internet
 
 #API
-```
-curl -sX POST -H "Content-Type: application/json" -d '{ "alg": "HS256", "secret": "your_pass", "iss": "user_name", "name": "your_name", "aud": "myapp", "exp": 3600, "sub": "*", "room": "'room_name'" }' http://your.server.com:port/api
-```
+not available in this version, if you want api use https://github.com/gpopesc/jitsi-token 
 
 ![image](https://user-images.githubusercontent.com/11590919/177880437-907d7254-bddf-4fd8-b2be-f31f50963daf.png)
 
