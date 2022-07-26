@@ -11,8 +11,6 @@ not available in this version, if you want api use https://github.com/gpopesc/ji
 
 This docker build use PHPMailer(https://github.com/PHPMailer/PHPMailer) for sending the emails and Yourls (https://yourls.org/) URL shortener (optional)
 
-The original project is in the link bellow, I just modify the interface and I added into docker container for simplicity.
-[https://github.com/emrahcom/emrah-tools](https://github.com/emrahcom/emrah-tools)
 
 
 Install your jitsi meeting in docker from here: https://jitsi.github.io/handbook/docs/devops-guide/devops-guide-docker/
