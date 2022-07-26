@@ -1,0 +1,96 @@
+td label::after {
+    content: " * ";
+    color: red;
+}
+
+table input {
+    background-color: #fffebd;
+}
+
+td {
+    padding: 10px;
+}
+
+table {
+    border: 1px solid black;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 850px;
+    padding: 10px;
+}
+
+label,
+input,
+td span {
+    padding: 5px;
+    font-size: 1.1em;
+}
+
+h1,
+.button {
+    text-align: center
+}
+
+img {
+    vertical-align: middle;
+    max-height: 100px;
+    padding: 0.5em;
+}
+
+.colspan {
+    text-align: left;
+    padding: 10px;
+    vertical-align: bottom;
+    height: 3em;
+}
+
+.colspan span::before {
+    content: " * ";
+    color: red;
+}
+
+.small,
+.colspan {
+    font-size: 0.8em
+}
+
+@media (pointer:none),
+(pointer:coarse) {
+    /* Force table to not be like tables anymore */
+    table,
+    thead,
+    tbody,
+    th,
+    td,
+    tr {
+        display: block
+    }
+    table {
+        max-width: 90vw
+    }
+    label,
+    td p {
+        font-size: 2.8em;
+        margin: 0px;
+    }
+    input {
+        font-size: 2.8em;
+        max-width: 80vw
+    }
+    h1 {
+        font-size: 2.8em;
+        margin-top: 1.5em;
+        margin-bottom: 1.1em;
+    }
+    img {
+        padding: 5px
+    }
+    .colspan {
+        margin-top: 2em
+    }
+    .small,
+    .colspan,
+    .mand {
+        font-size: 1.8em;
+    }
+}

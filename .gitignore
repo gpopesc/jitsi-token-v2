@@ -1,5 +1,4 @@
 .env
 data/*
-html/*
 vars.php
 docker-compose.yml

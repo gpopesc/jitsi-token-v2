@@ -1,0 +1,80 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Generate meeting link</title>
+    <link rel="stylesheet" href="css/contact.css">
+
+    <link rel="apple-touch-icon" sizes="57x57" href="./fav/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="./fav/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="./fav/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="./fav/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="./fav/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="./fav/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="./fav/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="./fav/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="./fav/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="./fav/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./fav/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="./fav/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./fav/favicon-16x16.png">
+    <link rel="manifest" href="./fav/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="./fav/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+</head>
+
+<body>
+    <h1>
+        <img src="./fav/android-icon-192x192.png" alt="Jitsi img" max-height=100 width=auto> Generate JITSI meeting link
+        <img src="./fav/android-icon-192x192.png" alt="Jitsi img" max-height=100 width=auto>
+    </h1>
+
+    <form name="sendemail" method="post" action="sendemail">
+        <table>
+            <tr>
+                <td><label>Name</label></td>
+                <td><input type="text" name="first_name" size="30" placeholder="name" required></td>
+            </tr>
+            <tr>
+                <td><label>Room Name</label></td>
+                <td><input type="text" name="room_name" size="30" placeholder="room name without spaces" required></td>
+            </tr>
+            <tr>
+                <td>
+                    <p>Meeting date</p>
+                </td>
+                <td><input type="datetime-local" name="meetingtime">
+                    <span class=small>Leave blank for current</span>
+                </td>
+            </tr>
+            <td>
+                <label>Meeting Duration</label>
+            </td>
+            <td><input type="number" name="duration" size="11" step="1" min="1" max="600" required>
+                <span class=small> minutes </span>
+            </td>
+            </tr>
+            <tr>
+                <td><label>Email</label></td>
+                <td><input type="email" name="email" size="30" placeholder="email address" required></td>
+            </tr>
+            <tr>
+                <td>
+                    <p>Avatar</p>
+                </td>
+                <td><input type="text" name="gravatar" size="30" placeholder="avatar http://link.to/pic "></td>
+            </tr>
+            <tr>
+                <td class=colspan colspan=2><span>mandatory fields </span> </td>
+
+            </tr>
+        </table>
+        <p class=button><input type="submit" value="Submit"></p>
+
+    </form>
+
+</body>
+
+</html>
