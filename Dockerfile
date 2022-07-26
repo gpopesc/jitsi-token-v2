@@ -36,7 +36,7 @@ ENV DEBIAN_FRONTEND=${DF} \
 
 
 # mandatory apps
-RUN apt-get update && apt-get -y --no-install-recommends install wget \
+RUN apt-get update && apt-get -y install --no-install-recommends wget \
       curl \
       tzdata \
       apache2 \
