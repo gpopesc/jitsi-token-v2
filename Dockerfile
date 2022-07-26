@@ -14,7 +14,7 @@ ENV DEBIAN_FRONTEND=${DF} \
     UID=33 \
     GID=33 \
     JITSI_SERVER=${JITSI_SERVER} \
-    JWT_ALG=${JWT_ALG} \
+    #JWT_ALG=${JWT_ALG} \
     JWT_SECRET=${JWT_SECRET} \
     JWT_ISS=${JWT_ISS} \
     JWT_AUD=${JWT_AUD} \
@@ -41,7 +41,8 @@ RUN apt-get update && apt-get -y install wget \
       tzdata \
       apache2 \
       php7.4 \
-      php7.4-common php7.4-curl php7.4-cli php7.4-dev php7.4-opcache php7.4-zip php7.4-intl \
+#    php7.4-common php7.4-curl php7.4-cli php7.4-dev php7.4-opcache php7.4-zip php7.4-intl \
+      php7.4-curl \
    && rm -rf /var/lib/apt/lists/*
 
 #set working directory to where Apache serves files
@@ -51,7 +52,6 @@ EXPOSE  80
 HEALTHCHECK --interval=1m --timeout=10s CMD curl --fail http://127.0.0.1:80
 
 #config files to temp location
-#RUN mkdir /var/www/html/script/
 COPY html/ /var/www/html
 
 
