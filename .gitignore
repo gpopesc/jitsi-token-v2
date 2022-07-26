@@ -1,4 +1,2 @@
 .env
-data/*
-vars.php
 docker-compose.yml
